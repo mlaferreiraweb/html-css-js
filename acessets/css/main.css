@@ -3,7 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
  @media screen and (min-width: 320px){
     .jl-page-wrapper{
         width: 100%;
@@ -64,8 +70,55 @@
         background-position-y: -45px;
         background-color: #fff;        
     }
+    .jl-contact-info{
+        z-index: 200;
+        width: 245px;
+        height: 165px;
+        padding: 25px;
+        position: fixed;
+        bottom: 115px;
+        right: 65px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1rem; 
+    }
+   .jl-contact-info-text{
+    margin-top: 15px;
+   }
+   .jl-contact-info-text h2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+   }
+   .jl-contact-info-text p{
+    margin-top: 5px;
     
+   }
     
+        
+    .jl-social-links{
+        display: flex;
+        width: 100%;
+        height: 45px;
+        justify-content: space-around;
+        align-items: center;        
+        margin-bottom: 30px;
+
+    }
+    .jl-social{
+        text-decoration: none;
+        display: inline-block;
+    }
+    .jl-social i{
+        font-size: 35px;
+        color: #2ccb69;
+        transition: all 0.3s ease;
+       
+    }
+    .jl-social i:hover{
+        color: #bcbcbc;
+    }
     
  }
  @media screen and (min-width: 576px){
@@ -129,6 +182,10 @@
  }
 
  /*CLASSES UTILITARIAS*/
+ .jl-title{
+    font-family: 'Abril Fatface', serif;
+    font-weight: normal;
+ }
  .jl-text-green{
     color: #2ccb69;
  }
