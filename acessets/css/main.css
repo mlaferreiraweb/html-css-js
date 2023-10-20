@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -9,11 +10,43 @@
         height: 100vh;
         display: block;
         background-color: #1c1c1c;
-        border: 30px solid #000;
+        border: 30px solid #000;       
+    }
+    .jl-topbar{
+        width: 100%;
+        height: 110px;
+        display: block;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+    }
+    .jl-logo{
+        width: 74px;
+        height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        margin-left: 60px;
+        background-color: #2ccb69;
+        border-radius: 0 0 37px 0;
+        padding-bottom: 20px;
         
+    }
 
+    .jl-logo img{
+        width: 46px;
+        height: 31px;
+        display: block;       
+    }
+    .jl-menu{
+      display: none;
 
     }
+    
+    
     
  }
  @media screen and (min-width: 576px){
@@ -23,7 +56,47 @@
     
  }
  @media screen and (min-width: 992px){
-    
+    .jl-menu{        
+        display: table;
+        display: flex;
+        align-items: center;
+        height: 110px;
+        margin-left: 30px; 
+      }
+      .jl-menu a{
+        text-decoration: none;
+        font-size: 1rem;
+        color: #bcbcbc;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: lowercase;
+        display: inline-block;
+        margin: 30px 20px 0 20px;
+        font-weight: 400;
+        position: relative;
+        transition: all .3s ease-out;     
+      }
+      .jl-menu a:first-child{
+        margin-left: 0;
+      }
+      .jl-menu a:hover{
+        color: #2ccb69;
+      }
+      
+      .jl-menu a::before{
+        content: '';
+        width: 0%;
+        height: 4px;
+        background-color: #2ccb69;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s ease-out;
+      }
+      .jl-menu a:hover::before{
+        width: 100%;
+
+      }
  }
  @media screen and (min-width: 1200px){
     
