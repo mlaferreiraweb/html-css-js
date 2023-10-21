@@ -420,9 +420,23 @@ p{
    .jl-items-content-counter span:nth-child(1){
      color: #fff;
    }
-   
-    
- }
+   .jl-slider-container{
+     width: 100%;
+     background-color: #fff;
+   }
+   .jl-slider-list{
+     width: auto;
+     height: 700px;
+     display: block;
+     background-color: deeppink;
+     list-style: none;    
+   }
+    .jl-slider-item{
+     display: inline-block;
+     width: 500px;
+     height: 500px;
+        
+    }
  @media screen and (min-width: 576px){
     
  }
@@ -649,5 +663,19 @@ p{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  
+  .red{
+    background-color: red;
+  }
+  .yellom{
+    background-color: yellow;
+  }
+  .blue{
+    background-color: blue;
+  }
+  .purple{
+    background-color: purple;
+  }
+  .green{
+    background-color: green;
+  }
  
