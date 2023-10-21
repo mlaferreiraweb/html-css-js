@@ -46,3 +46,75 @@ var waypoint = new Waypoint({
     },
     offset: '80%'
 });
+
+//PORTFOLIO SLIDER
+
+//DECLARANDO VARIAVIES DO SLIDER
+var sliderContainer = document.querySelector('.jl-slider-container');
+var sliderList      = document.querySelector('.jl-slider-list');
+var sliderItem      = document.querySelectorAll('.jl-slider-item');
+var sliderListWidth = null;
+
+
+//CAPTURANDO LARGURAS INDIVIDUAIS
+var containerWidth = sliderContainer.parentElement.offsetWidth;
+
+
+//PASSANDO LARGURAS DINÂMICAS
+sliderContainer.style.width = containerWidth + 'px';
+
+for(var p = 0; p < sliderItem.length; p++){
+    sliderItem[p].style.width = containerWidth + 'px';
+
+    var sliderItemWidth = sliderItem[p].offsetWidth;
+
+    sliderListWidth += sliderItemWidth;
+    
+}
+
+sliderList.style.width = sliderListWidth + 'px';
+
+
+//FAZENDO ANIMAÇÃO DO SLIDER ONCLICK
+var prevItem        = document.querySelector('.jl-items-prev'); 
+var nextItem        = document.querySelector('.jl-items-next');
+var sliderPosicao   = 0; 
+
+nextItem.addEventListener('click', function(e){
+    e.preventDefault();
+    var lastItem = (sliderListWidth - containerWidth);
+    
+    if((-1*(sliderPosicao) === lastItem)){
+        return;
+    }
+    sliderPosicao -= containerWidth;
+    
+    anime({
+        targets: sliderList,
+        translateX: sliderPosicao,
+        complete: function(anim) {
+            console.log('Animação concluída');
+        }
+      });
+      
+});
+
+prevItem.addEventListener('click', function(e){
+    e.preventDefault();
+   
+    
+    if(sliderPosicao === 0){
+        return;
+    }
+    sliderPosicao += containerWidth;
+    
+    anime({
+        targets: sliderList,
+        translateX: sliderPosicao,
+        complete: function(anim) {
+            console.log('Animação concluída');
+        }
+      });
+      
+});
+

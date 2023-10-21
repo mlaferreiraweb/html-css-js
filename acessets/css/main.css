@@ -421,20 +421,22 @@ p{
      color: #fff;
    }
    .jl-slider-container{
-     width: 100%;
+     display: block;     
      background-color: #fff;
+     overflow: hidden;
    }
-   .jl-slider-list{
-     width: auto;
+   .jl-slider-list{ 
      height: 700px;
      display: block;
-     background-color: deeppink;
+     background-color: rgb(71, 77, 72);
      list-style: none;    
    }
     .jl-slider-item{
-     display: inline-block;
-     width: 500px;
-     height: 500px;
+     display: block; 
+     height: inherit;
+     float: left;
+    
+      
         
     }
  @media screen and (min-width: 576px){
