@@ -332,7 +332,94 @@ p{
     transform-origin: top center;
     animation: lineDown 1.5s ease-out infinite ;
    }
+   /*-----HOME - PORTFOLIO*/
+   .jl-portfolio-navigatior{
+     width: 145px;
+     height: 400px;
+     display: table;     
+     position: absolute;
+     left: 15px;
+     top: 25vh;
+   }
+   .jl-item-counter{
+     width: 100%;
+     height: 90px;
+     display: block;     
+     margin-bottom: 60px;
+     position: relative;
+   }
+   .jl-item-counter::before{
+    content: '';
+    display: block;
+    width: 35px;
+    height: inherit;
+    background-color: #1c1c1c;
+    position: absolute;
+    left: 0;
+    top: 3px;
 
+   }
+   .jl-item-counter span{
+    font-size: 120px;
+    line-height: 90px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    
+   }
+
+   .jl-item-navigatior{
+     width: 100%;
+     display: table;    
+   }
+   .jl-item-navigatior a{
+    text-decoration: none;
+    display: block;
+    width: 20px;
+    height: 1px;    
+    margin: 0 0 80px 35px;
+    background-color: #4d4c4c;
+   }
+   .jl-item-navigatior .jl-item-active{
+     width: 85px;
+     background-color:#2ccb69;
+   }
+   .jl-item-navigatior a:last-child{
+    margin-bottom: 30px;
+   }
+   .jl-items-next-prev{
+     width: 100%;
+     height: 45px;     
+     display: block;
+     background-color: #2c2c2c;
+     border-radius:23px;    
+   }
+   .jl-items-content{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    text-decoration: none;
+
+   }
+   .jl-items-content a i{
+        color: #4d4c4c;
+        font-size: 20px;
+        transition: all 0.2s ease-out;
+   }
+   .jl-items-content a i:hover{
+    color: #2ccb69;
+   }
+   .jl-items-content-counter{
+    font-size: 20px;
+    line-height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4d4c4c;
+
+   }
+   .jl-items-content-counter span:nth-child(1){
+     color: #fff;
+   }
    
     
  }
@@ -525,7 +612,8 @@ p{
  
 
 .jl-full-height{
-    height: 100vh;   
+    height: 100vh;
+    position: relative;   
 }
 .jl-first-section{
     height: calc(100vh - 30px);
@@ -553,5 +641,13 @@ p{
  .jl-fade-out{
     animation: fadeOut 2s forwards ease-out;
  }
- 
+ .jl-no-radius-left{
+   border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+ }
+ .jl-no-radius-right{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
  
