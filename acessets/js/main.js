@@ -37,6 +37,12 @@ for(var i = 0; i < toggleModal.length; i++){
 
 }
 
+var postGallery = document.querySelector('.jl-post-gallery');
+var postGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (postGalleryHeight - 270) + 'px';
+
+
+
 //ANIMANDO ELEMENTOS ON SCROLL COM WAYPOINTS
 var myScrollDown = document.querySelector('.jl-scroll-down');
 var waypoint = new Waypoint({
@@ -46,4 +52,5 @@ var waypoint = new Waypoint({
     },
     offset: '80%'
 });
+
 

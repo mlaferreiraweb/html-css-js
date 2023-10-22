@@ -627,6 +627,10 @@ p{
     .jl-project-stats p{
         line-height: 30px;
     }
+    .jl-post{
+        width: 100%;
+        display: table;
+    }
     .jl-post p{
        margin-bottom: 30px;
 
@@ -635,6 +639,18 @@ p{
         width: 100%;
         display: table;
         padding: 45px 0;
+    }
+    
+    .jl-pre-gallery{
+        padding-bottom: 350px;
+    }
+    .jl-post-gallery{
+        display: block;
+    }
+   
+    .jl-post-gallery .container{
+       position: relative;
+       top: -270px;
     }
    
 
