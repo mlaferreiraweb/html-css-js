@@ -17,6 +17,13 @@ p{
     }
 
 }
+@keyframes fadeFromLetf{
+    to {
+        left: 0;
+        opacity: 1;
+    }
+
+}
 @keyframes slideTopIn{
     to {
         top: 15%;
@@ -24,6 +31,19 @@ p{
     }
 
 }
+@keyframes scaleRigth{
+    to {
+        transform: scaleX(1);
+    }
+
+}
+@keyframes scaleUp{
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
 
 @keyframes lineDown{
     0%{
@@ -339,7 +359,7 @@ p{
      display: table;     
      position: absolute;
      left: 15px;
-     top: 25vh;
+     top: 26vh;
    }
    .jl-item-counter{
      width: 100%;
@@ -379,8 +399,7 @@ p{
     margin: 0 0 80px 35px;
     background-color: #4d4c4c;
    }
-   .jl-item-navigatior .jl-item-active{
-     width: 85px;
+   .jl-item-navigatior .jl-item-active{     
      background-color:#2ccb69;
    }
    .jl-item-navigatior a:last-child{
@@ -421,24 +440,62 @@ p{
      color: #fff;
    }
    .jl-slider-container{
-     display: block;     
-     background-color: #fff;
+     display: block; 
      overflow: hidden;
    }
    .jl-slider-list{ 
      height: 700px;
-     display: block;
-     background-color: rgb(71, 77, 72);
+     display: block;     
      list-style: none;    
    }
     .jl-slider-item{
      display: block; 
-     height: inherit;
+     height: 500px;
      float: left;
-    
-      
-        
+     margin-top: calc(26vh - 75px);
     }
+
+    .jl-portfolio-item-info{
+        width: calc(100% - 75px);
+        display: table;
+        margin-top: 62px;
+        padding-right: 20px;
+        position: relative;
+        opacity: 0;
+        left: -75px;
+    }
+    .jl-portfolio-item-thumb{
+        width: 100%;        
+        display: table;
+        padding: 75px 0 19px 0;
+        position: relative;       
+    }
+    .jl-portfolio-item-thumb > a{
+        margin-top: 17px;
+        margin-right: 75px;
+        float: right;
+
+    }
+    .jl-portfolio-item-box{
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #2c2c2c;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+    .jl-portfolio-item-thumb img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: relative;        
+        left: -75px;
+        transform: scale(0);
+    }
+
  @media screen and (min-width: 576px){
     
  }
@@ -509,7 +566,16 @@ p{
     transition: all 0.2s ease-out;
     cursor: pointer;
     outline: none;
-    text-transform: lowercase; 
+    text-transform: lowercase;
+    position: relative;
+   
+}
+.jl-btn i{
+    font-size: 21px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-top: -3px;
 }
 .jl-btn-block{
     display: block;
@@ -518,6 +584,7 @@ p{
 }
 .jl-btn-small{
     height: 28px;
+    line-height: 28px;
     padding: 0 20px;
     border-radius: 14px;
     font-size: 11px;
@@ -525,6 +592,7 @@ p{
 }
 .jl-btn-medium{
     height: 38px;
+    line-height: 38px;
     padding: 0 27px;
     border-radius: 19px;
     font-size: 14px;
@@ -532,6 +600,7 @@ p{
 }
 .jl-btn-large{
     height: 45px;
+    line-height: 45px;
     padding: 0 35px;
     border-radius: 23px;
     font-size: 16px;
@@ -564,7 +633,10 @@ p{
     font-family: 'Abril Fatface', serif;
     font-weight: normal;
  }
- .jl-title-big{
+ .jl-title-large{
+    font-size: 64px;
+ }
+ .jl-title-xlarge{
     font-size: 120px;
  }
  .jl-text-green{
@@ -609,6 +681,22 @@ p{
     margin-left: 15px;
  }
 
+ .jl-mar-30{
+    margin: 30px;
+ }
+ .jl-mar-top-30{
+    margin-top: 30px;
+ }
+ .jl-mar-right-30{
+   margin-right: 30px;
+ }
+ .jl-mar-bottom-30{
+    margin-bottom: 30px;
+ }
+ .jl-mar-left-30{
+    margin-left: 30px;
+ }
+
  
  .jl-pad-15{
     padding: 15px;
@@ -623,7 +711,23 @@ p{
     padding-bottom: 15px;
  }
  .jl-pad-left-15{
-    padding-left: 15;
+    padding-left: 15px;
+ }
+
+ .jl-pad-30{
+    padding: 30px;
+ }
+ .jl-pad-top-30{
+    padding-top: 30px;
+ }
+ .jl-pad-right-30{
+    padding-right: 30px;
+ }
+ .jl-pad-bottom-30{
+    padding-bottom: 30px;
+ }
+ .jl-pad-left-30{
+    padding-left: 30px;
  }
  
 
@@ -656,6 +760,15 @@ p{
  }
  .jl-fade-out{
     animation: fadeOut 2s forwards ease-out;
+ }
+ .jl-fade-From-letf{
+    animation: fadeFromLetf 2s 0.7s forwards cubic-bezier(0,1.01,.32,1);
+ }
+ .jl-scale-right{
+    animation: scaleRigth 0.7s 0.2s forwards cubic-bezier(0,1.01,.32,1);
+ }
+ .jl-scale-up{
+    animation: scaleUp 0.5s 0.5s forwards cubic-bezier(0,1.01,.32,1);
  }
  .jl-no-radius-left{
    border-top-left-radius: 0;
