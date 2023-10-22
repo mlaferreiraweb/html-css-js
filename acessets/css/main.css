@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,400;0,700;0,800;1,700;1,800&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -67,7 +67,8 @@ p{
         transform-origin: bottom center;
     }    
 
-}
+ }
+
 @keyframes arrowDown{
    0% {
         bottom: 25px;
@@ -85,9 +86,9 @@ p{
         bottom: 5px;
         opacity: 0;
     }
-}
+ }
 
- @media screen and (min-width: 320px){
+ @media screen and (min-width: 320px){ 
 
     .jl-page-wrapper, .jl-preloader{
         width: 100%;
@@ -196,6 +197,7 @@ p{
         left: 0;
         display: flex;
         align-items: center;
+        z-index: 900;
     }
     .jl-logo{
         width: 74px;
@@ -208,6 +210,10 @@ p{
         border-radius: 0 0 37px 0;
         padding-bottom: 20px;
         
+    }
+    .jl-logo a{
+        text-decoration: none;
+        outline: none;
     }
 
     .jl-logo img{
@@ -448,14 +454,28 @@ p{
      display: block;     
      list-style: none;    
    }
-    .jl-slider-item{
+   .jl-portfolio-list{
+     list-style: none;   
+   }
+
+   .jl-slider-list .jl-slider-item{
      display: block; 
      height: 500px;
      float: left;
      margin-top: calc(26vh - 75px);
     }
+    .jl-portfolio-list .jl-portfolio-item:nth-child(1){
+        margin-top: 80px;
+        margin-bottom: 230px;
+    }
+    .jl-portfolio-list .jl-portfolio-item{
+        margin-top: 250px;
+        margin-bottom: 100px;
 
-    .jl-portfolio-item-info{
+    }
+    
+
+    .jl-slider-list .jl-portfolio-item-info{
         width: calc(100% - 75px);
         display: table;
         margin-top: 62px;
@@ -464,19 +484,28 @@ p{
         opacity: 0;
         left: -75px;
     }
-    .jl-portfolio-item-thumb{
+    .jl-portfolio-list .jl-portfolio-item-info{
+        width: calc(100% - 105px);
+
+    }
+    .jl-slider-list .jl-portfolio-item-thumb,
+    .jl-portfolio-list .jl-portfolio-item-thumb
+    {
         width: 100%;        
         display: table;
         padding: 75px 0 19px 0;
         position: relative;       
     }
-    .jl-portfolio-item-thumb > a{
+    .jl-slider-list .jl-portfolio-item-thumb > a,
+    .jl-portfolio-list .jl-portfolio-item-thumb > a
+    {
         margin-top: 17px;
         margin-right: 75px;
         float: right;
 
     }
-    .jl-portfolio-item-box{
+    .jl-slider-list .jl-portfolio-item-box,
+    .jl-portfolio-list .jl-portfolio-item-box{
         width: 100%;
         height: 100%;
         display: block;
@@ -487,7 +516,12 @@ p{
         transform: scaleX(0);
         transform-origin: right;
     }
-    .jl-portfolio-item-thumb img{
+    .jl-portfolio-list .jl-portfolio-item-box{
+        transform: scaleX(1);
+    }
+
+
+    .jl-slider-list .jl-portfolio-item-thumb img{
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -495,6 +529,116 @@ p{
         left: -75px;
         transform: scale(0);
     }
+    .jl-portfolio-list .jl-portfolio-item-thumb img{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: relative;        
+        left: -75px;        
+    }
+
+    
+    .jl-portfolio-list .jl-portfolio-item-thumb img{
+        transform: scale(1);
+    }
+
+    /*------PORTFOLIO PROJECTOS------*/
+    .jl-section-offset-top{
+        margin-top: 130px;
+    }
+    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info{
+        text-align: right;
+        margin-top: 53px;
+    }
+    
+    .jl-portfolio-list .jl-portfolio-item:nth-child(odd) .jl-portfolio-item-info > a{
+        float: right;
+    }
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) > .row{
+        flex-direction: row-reverse;
+    }
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-info{
+        margin-top: 55px;
+        margin-left: 105px; 
+    }
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb img{
+        left: 75px;
+    }
+    .jl-portfolio-list .jl-portfolio-item:nth-child(even) .jl-portfolio-item-thumb > a{
+        float: left;
+        margin-left: 75px;
+    }
+
+
+    /*------PAGE SOBRE-----*/
+    #jl-avatar-sobre img{
+        position: relative;
+        left: -15px;
+    }
+
+    /*------PAGE MANEGE -> DETALHES-----*/
+    .jl-hero{
+        margin-top: 100px;
+        height: 500px;        
+        display: block;
+        background-image: url('../../pages/portfolio/img/hero.png');
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center center;
+    }
+    .jl-hero-inner{
+        height: 500px;
+        
+    }
+    .jl-hero-inner-content{
+        position: relative;
+        z-index: 10;
+    }
+    .jl-hero-inner-content p{
+        margin-bottom: 15px;
+    }
+    
+    .jl-hero-inner-content::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: block;
+        position: absolute;
+        top: -65px;
+        left: -65px;
+        box-sizing: content-box;
+        padding: 65px;
+        z-index:5;
+    }
+    .jl-hero-inner-content > .row{
+        position: relative;
+        z-index: 6;
+    }
+    .jl-hero h1{        
+        margin-bottom: 50px;
+    }
+    .jl-project-stats{
+        width: 100%;
+        height: 100%;
+        display: table;
+        border-right: 1px solid #2ccb69;
+    }
+    .jl-project-stats p{
+        line-height: 30px;
+    }
+    .jl-post p{
+       margin-bottom: 30px;
+
+    }
+    .jl-post-section{
+        width: 100%;
+        display: table;
+        padding: 45px 0;
+    }
+   
+
+ }
 
  @media screen and (min-width: 576px){
     
@@ -633,6 +777,13 @@ p{
     font-family: 'Abril Fatface', serif;
     font-weight: normal;
  }
+ .jl-subtitle{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+ }
+ .jl-title-medium{
+    font-size: 48px;
+ }
  .jl-title-large{
     font-size: 64px;
  }
@@ -651,7 +802,9 @@ p{
  .jl-text-black{
     color: #000;
  }
-
+.jl-text-center{
+    text-align: center;
+}
  .jl-bg-green{
     background-color: #2ccb69;
  }
@@ -664,6 +817,8 @@ p{
  .jl-bg-black{    
     background-color: #000;
  }
+
+
 
  .jl-mar-15{
     margin: 15px;
@@ -741,6 +896,114 @@ p{
 .jl-no-padding{
     padding: 0 !important;
 }
+.jl-box-img{
+    width: 100%;
+    display: table;
+}
+.jl-img-responsive{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.jl-page-list{
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+.jl-page-list > li{
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 15px;
+    padding-left: 21px;
+    position: relative;
+}
+.jl-page-list > li:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: block;
+    background-color: #2ccb69;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;    
+}
+
+.jl-address{
+    width: 100%;   
+    border-radius: 5px;
+    padding: 20px;    
+}
+.jl-address-white{
+    background-color: #e0dcdc;
+    color: #151515;
+}
+.jl-address-dark{
+    background-color: #3d3c3c;
+    color: #eee;
+}
+.jl-address-header{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #bcbcbc;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.jl-address-body,
+.jl-address-footer{
+    text-indent: 15px;
+    margin-bottom: 18px;
+}
+.jl-address-white .jl-address-body p{
+    font-style: italic;
+    font-weight: 400;
+}
+.jl-address-dark .jl-address-body p{
+    font-style: italic;
+    font-weight: 400;
+}
+.jl-address-white .jl-address-footer{
+    background-color: #eee;    
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;    
+    padding: 10px;   
+}
+.jl-address-dark .jl-address-footer{
+    background-color: #504f4f;    
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;    
+    padding: 10px
+
+}
+
+.jl-address-footer p{
+    text-align: right;
+    line-height: 21px;
+    margin-bottom: 8px;    
+}
+.jl-address-icon-footer{
+    padding-top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.jl-address-white  a i{
+    color: #333;
+
+}
+.jl-address-white  a i:hover{
+    color: #10823c;
+}
+
+
+
 
 
 
